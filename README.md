@@ -49,6 +49,7 @@ In this `src/ts` is the directory of all the typescript files and `src/js` is th
   "exclude": ["node_modules"]
   }
 ```
+Do NOT remove the `[]` brackets from the directory when copying
 5. To add a watch file, run the following command in the terminal
 ```
 npm install --save-devs typescript

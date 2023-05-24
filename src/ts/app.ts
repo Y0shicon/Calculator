@@ -1,5 +1,3 @@
-console.log('hello')
+const obj = { width: 10, height: 15 };
+const area = obj.width * obj.height;
 
-function jackson(){
-    console.log("yo dog")
-}

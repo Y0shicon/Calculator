@@ -1,6 +1,4 @@
 "use strict";
-console.log('hello');
-function jackson() {
-    console.log("yo dog");
-}
+const obj = { width: 10, height: 15 };
+const area = obj.width * obj.height;
 //# sourceMappingURL=app.js.map

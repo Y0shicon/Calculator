@@ -1,48 +1,85 @@
-$offwhite : #ebebeb;
-$offblack : #171717;
-$primary-color : #a161f7;
-$secondary-color : #7956b0;
-$grey : #7f9096;
+$offwhite: #ebebeb;
+$offblack: #171717;
+$primary-color: #a161f7;
+$secondary-color: #7956b0;
+$grey: #7f9096;
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: grey;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
 }
 
-.calculatorContainer{
+.calculatorContainer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  width: 100%;
+  height: 600px;
+  max-width: 400px;
+
+  border: 2px solid black;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-inline: auto;
+
+  background-color: $offblack;
+
+  .topView {
+    height: 35%;
     width: 100%;
-    height: 600px;
-    max-width: 400px;
 
-    border: 2px solid black;
-    border-radius: 15px;
+    border: 2px solid green;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-radius: 5px;
+  }
 
-    margin: auto;
+  .bottomView {
+    height: 65%;
+    width: 100%;
+
+    border: 2px solid firebrick;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+}
+
+.bottomView {
+  .button {
+    margin-inline: 15px;
+    margin-top: 5px;
+
+    // border: 2px solid black;
+    border-radius: 5px;
+
+    display: grid;
+    place-items: center;
 
     background-color: $offblack;
 
-    .topView{
-        height: 35%;
-        width: 100%;
-    
-        border: 2px solid green;
-    }
-    
-    .bottomView{
-        height: 65%;
-        width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    // box-shadow: rgba(0, 0, 0) 0em 0em 0.1em 0.1em;
+    transition: box-shadow 0.2s ease;
 
-        border: 2px solid firebrick;
+    &:hover {
+      cursor: pointer;
+      box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0.2em 0.2em;
+    }
+    span {
+      color: $offwhite;
     }
 
-    
+    span.grey-font {
+      color: $grey;
+    }
+  }
 }
-
-
-

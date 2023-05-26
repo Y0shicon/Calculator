@@ -16,7 +16,7 @@ span {
   height: 600px;
   max-width: 400px;
   border: 2px solid black;
-  border-radius: 15px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,7 @@ span {
   height: 35%;
   width: 100%;
   box-shadow: black 0px 0px 0.2em 0.2em;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 .calculatorContainer .bottomView {
   height: 65%;
@@ -72,7 +72,7 @@ span {
   border-radius: 15px;
   display: grid;
   place-items: center;
-  background-color: #171717;
+  background-color: rgba(16, 15, 15, 0.366);
   box-shadow: rgba(50, 50, 93, 0.45) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   transition: box-shadow 0.2s ease;
 }

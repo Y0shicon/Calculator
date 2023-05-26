@@ -37,6 +37,7 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
         
         let opText = button.getAttribute("op");
         
+        // If the operator is "=", then the result is displayed in the activeTextBox and the historyTextBox is cleared
         if (opText == "=") {
             // @ts-ignore
             activeTextBox.innerHTML = eval(historyTextBox.innerHTML + activeTextBox.innerHTML);
@@ -44,12 +45,15 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
             historyTextBox.innerHTML = "";
         }
 
+        // If the historyTextBox is empty, then the activeTextBox is moved to the historyTextBox and the operator is added
         // @ts-ignore
         else if (historyTextBox.innerHTML == "") {
             // @ts-ignore
             historyTextBox.innerHTML = activeTextBox.innerHTML + ' ' + opText;
             // @ts-ignore
             activeTextBox.innerHTML = "";
+
+        // If the historyTextBox is not empty, then the activeTextBox is evaluated and the result is moved to the historyTextBox
         } else {
             // @ts-ignore
             historyTextBox.innerHTML = eval(historyTextBox.innerHTML + activeTextBox.innerHTML) + ' ' + opText;
@@ -60,3 +64,5 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
         
     });
 })
+
+// Adding the decimal button functionality

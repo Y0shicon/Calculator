@@ -1,4 +1,7 @@
 "use strict";
-const obj = { width: 10, height: 15 };
-const area = obj.width * obj.height;
+// assigning number to each number
+// function 
+// function numBut(num: number) {
+//     return function();
+// }
 //# sourceMappingURL=app.js.map

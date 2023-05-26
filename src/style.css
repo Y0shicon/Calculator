@@ -33,17 +33,44 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-row-gap: 0;
+}
+
+.topView {
+  position: relative;
+  border: 2px solid greenyellow;
+  height: 40%;
+  width: 100%;
+}
+.topView .activeDisplay {
+  border: 2px solid blue;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  color: white;
+}
+.topView .activeDisplay span {
+  font-size: 2rem;
+}
+.topView .historyDisplay {
+  border: 2px solid royalblue;
+  position: absolute;
+  bottom: 30%;
+  right: 5%;
+  color: #a161f7;
+}
+.topView .historyDisplay span {
+  font-size: 1rem;
 }
 
 .bottomView .button {
   margin-inline: 15px;
-  margin-top: 5px;
+  margin-block: 5px;
   border-radius: 5px;
   display: grid;
   place-items: center;
   background-color: #171717;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.45) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   transition: box-shadow 0.2s ease;
 }
 .bottomView .button:hover {
@@ -55,6 +82,12 @@ body {
 }
 .bottomView .button span.grey-font {
   color: #7f9096;
+}
+.bottomView #equalBut {
+  background-color: #a161f7;
+}
+.bottomView #equalBut:hover {
+  background-color: #7956b0;
 }
 
 /*# sourceMappingURL=style.css.map */

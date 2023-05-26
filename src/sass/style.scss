@@ -49,14 +49,49 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-row-gap: 0;
+  }
+}
+
+.topView{
+  position: relative;
+
+  border: 2px solid greenyellow;
+
+  height: 40%;
+  width: 100%;
+
+  .activeDisplay{
+    border: 2px solid blue;
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+
+    color: white;
+
+    span{
+      font-size: 2rem;
+    }
+  }
+
+  .historyDisplay{
+    border: 2px solid royalblue;
+    position: absolute;
+    bottom: 30%;
+    right: 5%;
+
+    color: $primary-color;
+
+    span{
+      font-size: 1rem;
+    }
   }
 }
 
 .bottomView {
   .button {
     margin-inline: 15px;
-    margin-top: 5px;
+    margin-block: 5px;
 
     // border: 2px solid black;
     border-radius: 5px;
@@ -66,7 +101,7 @@ body {
 
     background-color: $offblack;
 
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.45) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     // box-shadow: rgba(0, 0, 0) 0em 0em 0.1em 0.1em;
     transition: box-shadow 0.2s ease;
 
@@ -80,6 +115,14 @@ body {
 
     span.grey-font {
       color: $grey;
+    }
+  }
+
+  #equalBut{
+    background-color: $primary-color;
+
+    &:hover{
+      background-color: $secondary-color;
     }
   }
 }

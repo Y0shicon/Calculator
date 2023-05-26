@@ -40,7 +40,9 @@ span{
     height: 35%;
     width: 100%;
 
-    border: 2px solid green;
+    // border: 2px solid green;
+
+    box-shadow: black 0px 0px 0.2em 0.2em;
 
     border-radius: 5px;
   }
@@ -49,7 +51,8 @@ span{
     height: 65%;
     width: 100%;
 
-    border: 2px solid firebrick;
+    // border: 2px solid firebrick;
+    // box-shadow: black 0px 0px 0.2em 0.2em;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -62,13 +65,13 @@ span{
 .topView{
   position: relative;
 
-  border: 2px solid greenyellow;
+  // border: 2px solid greenyellow;
 
   height: 40%;
   width: 100%;
 
   .activeDisplay{
-    border: 2px solid blue;
+    // border: 2px solid blue;
     position: absolute;
     bottom: 20%;
     right: 5%;
@@ -83,7 +86,7 @@ span{
   }
 
   .historyDisplay{
-    border: 2px solid royalblue;
+    // border: 2px solid royalblue;
     position: absolute;
     bottom: 40%;
     right: 5%;

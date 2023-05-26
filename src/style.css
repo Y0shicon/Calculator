@@ -27,13 +27,12 @@ span {
 .calculatorContainer .topView {
   height: 35%;
   width: 100%;
-  border: 2px solid green;
+  box-shadow: black 0px 0px 0.2em 0.2em;
   border-radius: 5px;
 }
 .calculatorContainer .bottomView {
   height: 65%;
   width: 100%;
-  border: 2px solid firebrick;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -43,12 +42,10 @@ span {
 
 .topView {
   position: relative;
-  border: 2px solid greenyellow;
   height: 40%;
   width: 100%;
 }
 .topView .activeDisplay {
-  border: 2px solid blue;
   position: absolute;
   bottom: 20%;
   right: 5%;
@@ -60,7 +57,6 @@ span {
   line-height: 1.19;
 }
 .topView .historyDisplay {
-  border: 2px solid royalblue;
   position: absolute;
   bottom: 40%;
   right: 5%;

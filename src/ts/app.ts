@@ -29,3 +29,34 @@ document.getElementById("ceBut").addEventListener("click", (e) => {
     activeTextBox.textContent = "";
 }
 )
+
+// Adding the operator button functionality
+document.querySelectorAll(".operatorBut").forEach((button) => {
+    button.addEventListener("click", (e) => {
+        console.log("Operator button clicked");
+        
+        let opText = button.getAttribute("op");
+        
+        if (opText == "=") {
+            // @ts-ignore
+            activeTextBox.innerHTML = eval(historyTextBox.innerHTML + activeTextBox.innerHTML);
+            // @ts-ignore
+            historyTextBox.innerHTML = "";
+        }
+
+        // @ts-ignore
+        else if (historyTextBox.innerHTML == "") {
+            // @ts-ignore
+            historyTextBox.innerHTML = activeTextBox.innerHTML + ' ' + opText;
+            // @ts-ignore
+            activeTextBox.innerHTML = "";
+        } else {
+            // @ts-ignore
+            historyTextBox.innerHTML = eval(historyTextBox.innerHTML + activeTextBox.innerHTML) + ' ' + opText;
+            // @ts-ignore
+            activeTextBox.innerHTML = "";
+        }
+
+        
+    });
+})

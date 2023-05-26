@@ -3,11 +3,17 @@ $offblack: #171717;
 $primary-color: #a161f7;
 $secondary-color: #7956b0;
 $grey: #7f9096;
+$primary-font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 body {
   margin: 0;
   padding: 0;
   background-color: grey;
+}
+
+span{
+  font-family: $primary-font-family;
+  pointer-events: none;
 }
 
 .calculatorContainer {
@@ -64,20 +70,22 @@ body {
   .activeDisplay{
     border: 2px solid blue;
     position: absolute;
-    bottom: 10%;
+    bottom: 20%;
     right: 5%;
 
     color: white;
 
     span{
+      font-weight: 500;
       font-size: 2rem;
+      line-height: 1.19;
     }
   }
 
   .historyDisplay{
     border: 2px solid royalblue;
     position: absolute;
-    bottom: 30%;
+    bottom: 40%;
     right: 5%;
 
     color: $primary-color;
@@ -94,7 +102,7 @@ body {
     margin-block: 5px;
 
     // border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 15px;
 
     display: grid;
     place-items: center;
@@ -115,6 +123,12 @@ body {
 
     span.grey-font {
       color: $grey;
+    }
+  }
+
+  #divideBut, #addBut, #equalBut, #decimalBut {
+    span{
+      font-size: 1.5rem;
     }
   }
 

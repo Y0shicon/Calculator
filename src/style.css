@@ -4,6 +4,11 @@ body {
   background-color: grey;
 }
 
+span {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  pointer-events: none;
+}
+
 .calculatorContainer {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -45,17 +50,19 @@ body {
 .topView .activeDisplay {
   border: 2px solid blue;
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
   right: 5%;
   color: white;
 }
 .topView .activeDisplay span {
+  font-weight: 500;
   font-size: 2rem;
+  line-height: 1.19;
 }
 .topView .historyDisplay {
   border: 2px solid royalblue;
   position: absolute;
-  bottom: 30%;
+  bottom: 40%;
   right: 5%;
   color: #a161f7;
 }
@@ -66,7 +73,7 @@ body {
 .bottomView .button {
   margin-inline: 15px;
   margin-block: 5px;
-  border-radius: 5px;
+  border-radius: 15px;
   display: grid;
   place-items: center;
   background-color: #171717;
@@ -82,6 +89,9 @@ body {
 }
 .bottomView .button span.grey-font {
   color: #7f9096;
+}
+.bottomView #divideBut span, .bottomView #addBut span, .bottomView #equalBut span, .bottomView #decimalBut span {
+  font-size: 1.5rem;
 }
 .bottomView #equalBut {
   background-color: #a161f7;

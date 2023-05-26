@@ -86,7 +86,10 @@ span {
 .bottomView .button span.grey-font {
   color: #7f9096;
 }
-.bottomView #divideBut span, .bottomView #addBut span, .bottomView #equalBut span, .bottomView #decimalBut span {
+.bottomView #divideBut span,
+.bottomView #addBut span,
+.bottomView #equalBut span,
+.bottomView #decimalBut span {
   font-size: 1.5rem;
 }
 .bottomView #equalBut {
@@ -94,6 +97,20 @@ span {
 }
 .bottomView #equalBut:hover {
   background-color: #7956b0;
+}
+
+@media (max-width: 500px) {
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .calculatorContainer {
+    inset: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

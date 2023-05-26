@@ -3,7 +3,8 @@ $offblack: #171717;
 $primary-color: #a161f7;
 $secondary-color: #7956b0;
 $grey: #7f9096;
-$primary-font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$primary-font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+  sans-serif;
 
 body {
   margin: 0;
@@ -11,7 +12,7 @@ body {
   background-color: grey;
 }
 
-span{
+span {
   font-family: $primary-font-family;
   pointer-events: none;
 }
@@ -62,7 +63,7 @@ span{
   }
 }
 
-.topView{
+.topView {
   position: relative;
 
   // border: 2px solid greenyellow;
@@ -70,7 +71,7 @@ span{
   height: 40%;
   width: 100%;
 
-  .activeDisplay{
+  .activeDisplay {
     // border: 2px solid blue;
     position: absolute;
     bottom: 20%;
@@ -78,14 +79,14 @@ span{
 
     color: white;
 
-    span{
+    span {
       font-weight: 500;
       font-size: 2rem;
       line-height: 1.19;
     }
   }
 
-  .historyDisplay{
+  .historyDisplay {
     // border: 2px solid royalblue;
     position: absolute;
     bottom: 40%;
@@ -93,7 +94,7 @@ span{
 
     color: $primary-color;
 
-    span{
+    span {
       font-size: 1rem;
     }
   }
@@ -112,7 +113,8 @@ span{
 
     background-color: rgba(16, 15, 15, 0.366);
 
-    box-shadow: rgba(50, 50, 93, 0.45) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.45) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     // box-shadow: rgba(0, 0, 0) 0em 0em 0.1em 0.1em;
     transition: box-shadow 0.2s ease;
 
@@ -129,17 +131,36 @@ span{
     }
   }
 
-  #divideBut, #addBut, #equalBut, #decimalBut {
-    span{
+  #divideBut,
+  #addBut,
+  #equalBut,
+  #decimalBut {
+    span {
       font-size: 1.5rem;
     }
   }
 
-  #equalBut{
+  #equalBut {
     background-color: $primary-color;
 
-    &:hover{
+    &:hover {
       background-color: $secondary-color;
     }
+  }
+}
+
+@media (max-width: 500px) {
+  html{
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+  }
+
+  .calculatorContainer {
+    inset: 0;
   }
 }

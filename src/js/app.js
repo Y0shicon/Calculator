@@ -3,15 +3,13 @@ let activeTextBox = document.getElementById("activeText");
 let historyTextBox = document.getElementById("historyText");
 document.querySelectorAll(".numBut").forEach((button) => {
     button.addEventListener("click", (e) => {
-        let numText = button.getAttribute("num");
         // @ts-ignore
-        activeTextBox.innerHTML += numText;
+        activeTextBox.innerHTML += button.getAttribute("num");
     });
 });
 // Addinf the AC and CE button functionality
 // @ts-ignore
 document.querySelector("#acBut").addEventListener("click", (e) => {
-    console.log("AC button clicked");
     // @ts-ignore
     activeTextBox.textContent = "";
     // @ts-ignore
@@ -61,4 +59,12 @@ document.querySelector("#decBut").addEventListener("click", (e) => {
     // @ts-ignore
     activeTextBox.innerHTML += ".";
 });
+
+// Implementing the keyboard functionality
+
+
+
+// Implementing the backspace functionality
+document.querySelector("#backspaceBut").addEventListener("click", (e) => {activeTextBox.innerHTML = activeTextBox.innerHTML.slice(0, -1);});
+
 //# sourceMappingURL=app.js.map

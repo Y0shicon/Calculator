@@ -3,10 +3,8 @@ let historyTextBox = document.getElementById("historyText");
 
 document.querySelectorAll(".numBut").forEach((button) => {
     button.addEventListener("click", (e) => {
-        let numText = button.getAttribute("num");
-
         // @ts-ignore
-        activeTextBox.innerHTML += numText;
+        activeTextBox.innerHTML += button.getAttribute("num");
     });
 }
 )
@@ -15,7 +13,6 @@ document.querySelectorAll(".numBut").forEach((button) => {
 // @ts-ignore
 
 document.querySelector("#acBut").addEventListener("click", (e) => {
-    console.log("AC button clicked");
     // @ts-ignore
     activeTextBox.textContent = "";
     // @ts-ignore
@@ -45,7 +42,6 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
             // @ts-ignore
             historyTextBox.innerHTML = "";
         }
-
         // If the historyTextBox is empty, then the activeTextBox is moved to the historyTextBox and the operator is added
         // @ts-ignore
         else if (historyTextBox.innerHTML == "") {
@@ -53,7 +49,6 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
             historyTextBox.innerHTML = activeTextBox.innerHTML + ' ' + opText;
             // @ts-ignore
             activeTextBox.innerHTML = "";
-
         // If the historyTextBox is not empty, then the activeTextBox is evaluated and the result is moved to the historyTextBox
         } else {
             // The .replace() method is used to replace the "X" and "÷" symbols with "*" and "/" respectively so that the eval() function can evaluate the expression
@@ -61,9 +56,7 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
             historyTextBox.innerHTML = eval((historyTextBox.innerHTML + activeTextBox.innerHTML).replace("X", "*").replace("÷", "/")) + ' ' + opText;
             // @ts-ignore
             activeTextBox.innerHTML = "";
-        }
-
-        
+        } 
     });
 })
 
@@ -77,3 +70,7 @@ document.querySelector("#decBut").addEventListener("click", (e) => {
     activeTextBox.innerHTML += ".";
 })
 
+// Implementing the keyboard functionality
+
+// Implementing the backspace functionality
+document.querySelector

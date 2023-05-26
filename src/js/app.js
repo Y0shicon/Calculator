@@ -30,7 +30,7 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
         // If the operator is "=", then the result is displayed in the activeTextBox and the historyTextBox is cleared
         if (opText == "=") {
             // @ts-ignore
-            activeTextBox.innerHTML = eval(historyTextBox.innerHTML + activeTextBox.innerHTML);
+            activeTextBox.innerHTML = eval((historyTextBox.innerHTML + activeTextBox.innerHTML).replace("X", "*").replace("÷", "/"));
             // @ts-ignore
             historyTextBox.innerHTML = "";
         }
@@ -45,7 +45,7 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
         }
         else {
             // @ts-ignore
-            historyTextBox.innerHTML = eval(historyTextBox.innerHTML + activeTextBox.innerHTML) + ' ' + opText;
+            historyTextBox.innerHTML = eval((historyTextBox.innerHTML + activeTextBox.innerHTML).replace("X", "*").replace("÷", "/")) + ' ' + opText;
             // @ts-ignore
             activeTextBox.innerHTML = "";
         }

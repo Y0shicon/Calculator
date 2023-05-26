@@ -39,6 +39,7 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
         
         // If the operator is "=", then the result is displayed in the activeTextBox and the historyTextBox is cleared
         if (opText == "=") {
+            // The .replace() method is used to replace the "X" and "÷" symbols with "*" and "/" respectively so that the eval() function can evaluate the expression
             // @ts-ignore
             activeTextBox.innerHTML = eval((historyTextBox.innerHTML + activeTextBox.innerHTML).replace("X", "*").replace("÷", "/"));
             // @ts-ignore
@@ -55,6 +56,7 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
 
         // If the historyTextBox is not empty, then the activeTextBox is evaluated and the result is moved to the historyTextBox
         } else {
+            // The .replace() method is used to replace the "X" and "÷" symbols with "*" and "/" respectively so that the eval() function can evaluate the expression
             // @ts-ignore
             historyTextBox.innerHTML = eval((historyTextBox.innerHTML + activeTextBox.innerHTML).replace("X", "*").replace("÷", "/")) + ' ' + opText;
             // @ts-ignore

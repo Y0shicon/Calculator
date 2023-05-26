@@ -25,7 +25,7 @@ document.getElementById("ceBut").addEventListener("click", (e) => {
 // Adding the operator button functionality
 document.querySelectorAll(".operatorBut").forEach((button) => {
     button.addEventListener("click", (e) => {
-        console.log("Operator button clicked");
+        // console.log("Operator button clicked");
         let opText = button.getAttribute("op");
         // If the operator is "=", then the result is displayed in the activeTextBox and the historyTextBox is cleared
         if (opText == "=") {
@@ -52,4 +52,11 @@ document.querySelectorAll(".operatorBut").forEach((button) => {
     });
 });
 // Adding the decimal button functionality
+// @ts-ignore
+document.querySelector("#decBut").addEventListener("click", (e) => {
+    // console.log("Decimal button clicked");
+    // If the decimal button is clicked, then a decimal is added to the activeTextBox without spaces
+    // @ts-ignore
+    activeTextBox.innerHTML += ".";
+});
 //# sourceMappingURL=app.js.map

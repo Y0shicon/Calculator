@@ -38,8 +38,10 @@ Example :
 ```
 tsc --init --sourceMap --rootDir "src/ts" --outDir "src/js"
 ```
-In this `src/ts` is the directory of all the typescript files and `src/js` is the output directory where all the ts files are compiled to
+In this `src/ts` is the directory of all the typescript files and `src/js` is the output directory where all the ts files are compiled to.
+
 3. Try `tsc` in the terminal
+
 4. If it gives an error about `include` and `exclude`, then go to the `tsconfig.json` file and add the following lines of code at the end :
 ```
 {
@@ -50,6 +52,7 @@ In this `src/ts` is the directory of all the typescript files and `src/js` is th
   }
 ```
 Do NOT remove the `[]` brackets from the directory when copying
+
 5. To add a watch file, run the following command in the terminal
 ```
 npm install --save-devs typescript

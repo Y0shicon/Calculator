@@ -1,5 +1,5 @@
 # Calculator
-Trying to make a calculator while learning sass, typescript and npm
+Made a basic calculator to learn sass, typescript and npm
 
 ## Sass
 **Sass** Documentation can be read by using this [link](https://sass-lang.com/guide)
